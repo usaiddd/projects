@@ -76,7 +76,7 @@ int clear_screen(){
 
 }
 int introduction(){
-   int menu; // Variable to store the user's menu choice
+   int menu; // Variable to store the users menu choice
 
     // Display the welcome message and menu options
     printf("                                   WELCOME TO TIC TAC TOE (Square and Triangle Edition) ");
@@ -86,7 +86,7 @@ int introduction(){
 
     // Infinite loop to ensure the user enters a valid choice
     while (TRUE) {
-        // Read the user's input
+        // Read the users input
         scanf("%d", &menu);
 
         // Check if the user entered a valid choice
@@ -103,7 +103,7 @@ int introduction(){
     // Clear the screen after receiving a valid input
     clear_screen();
 
-    // Return the user's choice (1 or 2) to the calling function
+    // Return the users choice (1 or 2) to the calling function
     return menu;
 }
 int board_printing(){
@@ -118,7 +118,7 @@ int board_printing(){
         // Inner loop to create 6 lines for each row (3 lines for content and 3 for dividers).
         for (int n = 0; n < 6; n++) {
 
-            // Condition for when a cell's content is printed (row center line).
+            // Condition for when a cells content is printed (row center line).
             if (n == 3) {
                 // Print the cell number with spacing for alignment.
                 printf("     %d      ", x);
@@ -133,7 +133,7 @@ int board_printing(){
                 // Print the vertical divider.
                 printf("||");
             }
-            // Print the second cell's content in the row.
+            // Print the second cells content in the row.
             if (n == 3) {
                 // Print the cell number.
                 printf("     %d      ", x);
@@ -148,7 +148,7 @@ int board_printing(){
                 // Print the vertical divider.
                 printf("||");
             }
-            // Print the third cell's content in the row.
+            // Print the third cells content in the row.
             if (n == 3) {
                 // Print the cell number.
                 printf("     %d      ", x);
@@ -656,7 +656,7 @@ COORD values[9] = {{0, 0}, {0, 1}, {0, 2}, {1, 0}, {1, 1}, {1, 2}, {2, 0}, {2, 1
                         }
                     }
 
-                    // Update the board with player 1's move
+                    // Update the board with player 1s move
                     x = values[box - 1].X;
                     y = values[box - 1].Y;
                     ttt[x][y] = 2; // Set the move on the board
@@ -703,7 +703,7 @@ COORD values[9] = {{0, 0}, {0, 1}, {0, 2}, {1, 0}, {1, 1}, {1, 2}, {2, 0}, {2, 1
                         }
                     }
 
-                    // Update the board with player 2's move
+                    // Update the board with player 2s move
                     x = values[box - 1].X;
                     y = values[box - 1].Y;
                     ttt[x][y] = 3; // Set the move on the board
